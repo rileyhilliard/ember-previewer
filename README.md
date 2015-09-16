@@ -1,6 +1,6 @@
 # Ember-previewer
 
-This README outlines the details of collaborating on this Ember addon.
+Ember Media previewer addon.
 
 ## Installation
 
