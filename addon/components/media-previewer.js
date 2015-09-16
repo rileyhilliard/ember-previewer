@@ -21,7 +21,6 @@ export default Ember.Component.extend(Ember.Evented, {
   expanded: false,
   showCaption: Ember.computed.and('expanded', 'caption', 'toggleCaption'),
   toggleCaption: undefined,
-  mediaSrc: undefined,
   dismissText: undefined,
   caption: undefined,
 
@@ -74,29 +73,6 @@ export default Ember.Component.extend(Ember.Evented, {
       this.get('_emitEvents').call(this);
     }
 
-  },
-
-
-
-
-
-
-
-
-
-  /**
-   * Testing that events are emitting
-   */
-  eventFired: Ember.on('previewerActionFired', function() {
-    console.log('previewerActionFired');
-  }),
-
-  opened: Ember.on('previewerOpened', function() {
-    console.log('previewerOpened');
-  }),
-
-  closed: Ember.on('previewerClosed', function() {
-    console.log('previewerClosed');
-  })
+  }
 
 });
