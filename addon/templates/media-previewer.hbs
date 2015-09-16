@@ -1,0 +1,18 @@
+{{#if expanded}}
+<button class="dismiss-previewer" {{action "togglePreview" }}>{{dismissText}}</button>
+  <div class="media-wrapper">
+    {{yield}}
+  </div>
+  {{#if caption}}
+    <div {{bind-attr class=":caption showCaption:show:hide"}}>
+      {{caption}}
+    </div>
+  {{/if}}
+{{else}}
+
+  <button {{action "togglePreview" }}>
+    <div class="media-wrapper">
+      {{yield}}
+    </div>
+  </button>
+{{/if}}
